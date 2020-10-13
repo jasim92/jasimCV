@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+<!-- ------------------------------css block starts----------------------------------- -->
+{% block css %}
+#body-color{ 
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,0.6));
+    <!-- #ece1f7; purple  -->
+}
+h4 {
+min-height: 5vh;
+margin: 0;
+padding: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+box-sizing: border-box;
+}
+body {
+margin: 0;
+}
+#typed{
+<!-- border: 2px solid #7952b3; -->
+padding: 1rem;
+text-align: center;
+}
+
+#introduction {
+<!-- min-height: 100vh; -->
+align-items: right;
+margin-top: -290px;
+
+}
+.intro {
+font-size: 26px;
+font-family: sans-serif;
+font-weight: 200;
+line-height: 36px;
+
+}
+#social {
+    margin-top: 100px;
+    margin-left: 250px;
+}
+a i{
+    color: #7952b3;
+}
+
+.circleBase {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    background: url('/media/images/jasimpic.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+    border: 25px solid #7952b3;
+    margin-left: 250px;
+    margin-top: 100px;
+}
+.fab:hover {
+    color: black;
+}
+
+{% endblock css %}
+
+<!-- -------------------------------------------------------------------------------------------- -->
+
+{% block title %}Jasim Chouhan - Web Developer {% endblock title %}
+{% block homeactive%}active{% endblock homeactive%}
+
+{% block body %}
+
+<h4><span id="typed"></span></h4>
+<div class="picplusintro">
+<div class="circleBase"></div>
+<div id="introduction" class="col-lg-7 offset-lg-4">
+    <h3>
+        <p class="intro"> My name is Jasim Chouhan. I am a engineering graduate (B.Tech) in IT stream from India. I have
+            two years of
+            experience in IT
+            Support (UAE) and 1 year in Software testing (India).Currently I am working with Bin Hafeez Gen. Contracting
+            Company as an IT Support. I want to change my career in Web Development field. My
+            areas
+            of interests are HTML, CSS, Bootstrap, Django, Python and SQl. And also having knowledge in networking and
+            technical support.</p>
+    </h3>
+</div>
+</div>
+<div id="social" class="col-lg-6 ">
+   <!--Github-->
+    <a href="https://github.com/jasim92" class="btn-lg" type="button" role="button"><i class="fab fa-github fa-2x"></i></a>
+    <!--Stack Overflow-->
+    <a href="https://stackoverflow.com/users/13718810/jasim-chouhan" class="btn-lg" type="button" role="button"><i class="fab fa-stack-overflow fa-2x"></i></a>
+    <!--Twitter-->
+    <a href="https://twitter.com/jasim92" class="btn-lg" type="button" role="button"><i class="fab fa-twitter fa-2x"></i></a>
+    <!--Linkedin-->
+    <a href="https://www.linkedin.com/in/jasim-chouhan-898a6b55/" class="btn-lg" type="button" role="button"><i class="fab fa-linkedin-in fa-2x"></i></a>
+    
+
+</div>
+
+{% endblock body %}
+
+{% block js %}
+<script>
+    var typed = new Typed('#typed', {
+        strings: ["Welcome to My Website", "Check Out My Latest Works."],
+        backSpeed: 15,
+        smartBackspace: true,
+        backDelay: 1200,
+        startDelay: 1000,
+        typeSpeed: 25,
+        loop: true,
+
+    });
+</script>
+
+{% endblock js %}

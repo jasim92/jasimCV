@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block CSS %}
+
+{% endblock CSS %}
+
+{% block title %}My Works {% endblock title %}
+{% block myprojectsactive%}active{% endblock myprojectsactive%}
+
+{% block body %}
+
+{% for project in projects %}
+<div class="container col-lg-6  my-2">
+	
+ <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary"></strong>
+          <h3 class="mb-0">{{project.title}}</h3>
+          <div class="mb-1 text-muted">{{project.technology}}</div>
+          <p class="card-text mb-auto"><div class="preview">{{project.content|safe|truncatechars:50}}</div></p>
+          <div class="mt-2">
+          <a href="/projects/{{project.slug}}"><button type="button" class="btn btn-primary">Expend</button></a>
+          </div>
+        </div>
+       <div class="col-auto d-none d-lg-block" id="thumbnail" name="thumbnail">
+                    <img src="/media/{{project.thumbnail}}" class="bd-placeholder-img" width="200" height="250" aria-label="Placeholder: Thumbnail">
+                    <title>Placeholder</title>
+                </div>
+
+      </div>
+
+</div>
+{% endfor %}
+{% endblock body %}

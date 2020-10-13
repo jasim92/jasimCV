@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %} Project Content -Jasim Chouhan {% endblock title %}
+{% block body %}
+<div class="container col-lg-6 my-3">
+    <h2 class="blog-post-title">{{project.title}}</h2>
+    <p class="blog-post-meta">{{project.technology}}</p>
+    <div id="thumbnail" name="thumbnail">
+        <img src="/media/{{project.thumbnail}}"  class="bd-placeholder-img" aria-label="Placeholder: Thumbnail" width=720px height=360px>
+    </div>
+    <p class="my-3">{{project.content|safe}}</p>
+</div>
+{% endblock body %}
