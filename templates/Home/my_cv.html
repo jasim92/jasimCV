@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block CSS %}
+
+{% endblock CSS %}
+
+{% block title %}My CV - Jasim Chouhan{% endblock title %}
+{% block aboutactive%} active {% endblock aboutactive%}
+
+{% block body %}
+<div class="container col-lg-6 offset-lg-5 mt-5">
+<object data="jasim_CV_2020_web.pdf" type="application/pdf" width="100%" height="100%" class="cv">
+    <a href="/media/images/Jasim_CV_2020_web.pdf"> <button type="button" class="btn btn-success">Please Click To View CV</button></a>
+  </object>
+</div>
+{% endblock body %}
